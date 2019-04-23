@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +13,57 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CircularProgressView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOz-hV-h5y" customClass="CircularProgressView" customModule="CircularProgressView" customModuleProvider="target">
+                                <rect key="frame" x="348" y="-109" width="200" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="LNi-sZ-QuB"/>
+                                    <constraint firstAttribute="width" constant="200" id="OTw-eL-mak"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZHU-h1-o8e" customClass="CircularProgressView" customModule="CircularProgressView" customModuleProvider="target">
+                                <rect key="frame" x="348" y="107" width="200" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="T8O-aF-Fzf"/>
+                                    <constraint firstAttribute="width" constant="200" id="eZx-Dd-zgE"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLr-PZ-qTm" customClass="CircularProgressView" customModule="CircularProgressView" customModuleProvider="target">
+                                <rect key="frame" x="348" y="323" width="200" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="cmO-NH-WxD"/>
+                                    <constraint firstAttribute="width" constant="200" id="wcX-Xq-P0G"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZHU-h1-o8e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GUC-EH-siM"/>
+                            <constraint firstItem="rOz-hV-h5y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LSL-51-KaH"/>
+                            <constraint firstItem="YLr-PZ-qTm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P14-VS-fpx"/>
+                            <constraint firstItem="YLr-PZ-qTm" firstAttribute="top" secondItem="ZHU-h1-o8e" secondAttribute="bottom" constant="16" id="XG6-CP-L1i"/>
+                            <constraint firstItem="ZHU-h1-o8e" firstAttribute="width" secondItem="rOz-hV-h5y" secondAttribute="width" id="boy-UN-Gtk"/>
+                            <constraint firstItem="YLr-PZ-qTm" firstAttribute="width" secondItem="rOz-hV-h5y" secondAttribute="width" id="hSn-YL-4q8"/>
+                            <constraint firstItem="ZHU-h1-o8e" firstAttribute="height" secondItem="rOz-hV-h5y" secondAttribute="height" id="iDf-cz-hob"/>
+                            <constraint firstItem="ZHU-h1-o8e" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kmT-Wd-Ekt"/>
+                            <constraint firstItem="YLr-PZ-qTm" firstAttribute="height" secondItem="rOz-hV-h5y" secondAttribute="height" id="ngK-r5-7Hr"/>
+                            <constraint firstItem="ZHU-h1-o8e" firstAttribute="top" secondItem="rOz-hV-h5y" secondAttribute="bottom" constant="16" id="p4X-k6-EGS"/>
+                            <constraint firstItem="ZHU-h1-o8e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rdv-Aq-rYk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="firstProgressBarView" destination="rOz-hV-h5y" id="RAA-H9-KmW"/>
+                        <outlet property="secondProgressBarView" destination="ZHU-h1-o8e" id="vYk-9s-ZnZ"/>
+                        <outlet property="thirdProgressBarView" destination="YLr-PZ-qTm" id="Wl0-Fr-TBK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

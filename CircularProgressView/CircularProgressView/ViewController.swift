@@ -9,9 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet var topProgressBarView: CircularProgressView!
-    @IBOutlet var middleProgressBarView: CircularProgressView!
-    @IBOutlet var bottomProgressBarView: CircularProgressView!
+    @IBOutlet var firstProgressBarView: CircularProgressView!
+    @IBOutlet var secondProgressBarView: CircularProgressView!
+    @IBOutlet var thirdProgressBarView: CircularProgressView!
     
     let shapeLayer = CAShapeLayer()
     
@@ -40,12 +40,12 @@ class ViewController: UIViewController {
         
         view.backgroundColor = UIColor.lightGray
         
-        topProgressBarView.setProgress(to: 0.33, animated: true)
-        middleProgressBarView.setProgress(to: 0.7, animated: true)
-        bottomProgressBarView.setProgress(to: 1.21, animated: true)
+        firstProgressBarView.setProgress(to: 0.33, animated: true)
+        secondProgressBarView.setProgress(to: 0.7, animated: true)
+        thirdProgressBarView.setProgress(to: 1.21, animated: true)
         
-        topProgressBarView.text = "Today"
-        middleProgressBarView.text = "Week"
-        bottomProgressBarView.text = "Month"
+        firstProgressBarView.text = "Today"
+        secondProgressBarView.text = "Week"
+        thirdProgressBarView.text = "Month"
     }
 }
