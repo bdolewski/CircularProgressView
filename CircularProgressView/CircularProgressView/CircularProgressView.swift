@@ -34,8 +34,17 @@ class CircularProgressView: UIView {
     @IBInspectable public var maximumBarColor = UIColor(red: 0xd3/255.0, green: 0x2f/255.0, blue: 0x2f/255.0, alpha: 1.0)
     
     /// Duration of the "filling" animation
-    @IBInspectable public var animationDuration: TimeInterval = 1.0
-    
+    @IBInspectable public var animationDuration = TimeInterval(1.0)
+
+    /// Color for text inside progress bar
+    @IBInspectable public var textColor = UIColor.darkGray
+
+    /// Font size for text inside progress bar
+    @IBInspectable public var textSize = CGFloat(16.0)
+
+    /// Attributed text to be displayed inside of progress bar
+    @IBInspectable public var attributedText: NSAttributedString?
+
     private var label = UILabel()
     private let foregroundLayer = CAShapeLayer()
     private let backgroundLayer = CAShapeLayer()
@@ -122,8 +131,9 @@ private extension CircularProgressView {
 private extension CircularProgressView {
     private func setupPercentageLabel() {
         label.textAlignment = .center
-        label.textColor = UIColor.darkGray
-        label.font = UIFont.systemFont(ofSize: 14.0)
+        label.textColor = textColor
+        label.font = UIFont.systemFont(ofSize: textSize)
+        label.attributedText = attributedText
         addSubview(label)
         
         label.translatesAutoresizingMaskIntoConstraints = false
