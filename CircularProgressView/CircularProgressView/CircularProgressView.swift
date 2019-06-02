@@ -24,6 +24,13 @@ class CircularProgressView: UIView {
         }
     }
     
+    /// Attributed text to be displayed inside of progress bar
+    @IBInspectable public var attributedText: NSAttributedString? {
+        didSet {
+            label.attributedText = attributedText
+        }
+    }
+
     /// Color for backgorund/base bar
     @IBInspectable public var backgroundBarColor = UIColor(white: 0xda / 255.0, alpha: 1.0)
     
@@ -42,8 +49,7 @@ class CircularProgressView: UIView {
     /// Font size for text inside progress bar
     @IBInspectable public var textSize = CGFloat(16.0)
 
-    /// Attributed text to be displayed inside of progress bar
-    @IBInspectable public var attributedText: NSAttributedString?
+
 
     private var label = UILabel()
     private let foregroundLayer = CAShapeLayer()
@@ -133,7 +139,6 @@ private extension CircularProgressView {
         label.textAlignment = .center
         label.textColor = textColor
         label.font = UIFont.systemFont(ofSize: textSize)
-        label.attributedText = attributedText
         addSubview(label)
         
         label.translatesAutoresizingMaskIntoConstraints = false
