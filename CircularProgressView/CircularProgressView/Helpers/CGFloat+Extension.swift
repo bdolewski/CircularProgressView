@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension CGFloat {
+internal extension CGFloat {
     var half: CGFloat {
         return self / 2
     }
