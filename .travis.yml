@@ -6,4 +6,4 @@ env:
   - PROJECT_NAME=CircularProgressView
 install: (cd $PROJECT_NAME && swift package update)
 script:
-  - (cd $PROJECT_NAME && swift build)
+  - (cd $PROJECT_NAME && xcodebuild build -sdk iphoneos -scheme $PROJECT_NAME)
