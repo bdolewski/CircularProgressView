@@ -41,3 +41,7 @@ Duration of the "filling" animation - default value is `TimeInterval(1.0)`
     ///   - animated: Switch animations on/off
     public func setProgress(to progress: Double, animated: Bool)
 ```
+
+Difference between animation set to `True` and `False` - Example:
+
+![Example](https://giphy.com/gifs/ZZrfvWt1wV4GnMxL5P/html5)
