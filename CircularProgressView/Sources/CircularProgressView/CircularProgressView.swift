@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-class CircularProgressView: UIView {
+public final class CircularProgressView: UIView {
     /// Size of the bar (stroke width)
     @IBInspectable public var lineWidth: CGFloat = 12.0 {
         didSet {
@@ -53,7 +53,7 @@ class CircularProgressView: UIView {
     private let foregroundLayer = CAShapeLayer()
     private let backgroundLayer = CAShapeLayer()
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         
         backgroundColor = .clear
