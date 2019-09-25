@@ -32,20 +32,20 @@ public final class CircularProgressView: UIView {
     }
 
     /// Color for backgorund/base bar
-    @IBInspectable public var backgroundBarColor = UIColor(white: 0xda / 255.0, alpha: 1.0)
+    @IBInspectable public var backgroundBarColor = UIColor.systemGray
     
     /// Color for foreground/main bar
-    @IBInspectable public var foregroundBarColor = UIColor(red: 0x00, green: 0x55/255.0, blue: 0xef/255.0, alpha: 1.0)
+    @IBInspectable public var foregroundBarColor = UIColor.systemBlue
     
     /// Color for maximum value (100%) of the bar
-    @IBInspectable public var maximumBarColor = UIColor(red: 0xd3/255.0, green: 0x2f/255.0, blue: 0x2f/255.0, alpha: 1.0)
+    @IBInspectable public var maximumBarColor = UIColor.systemRed
     
     /// Duration of the "filling" animation
     @IBInspectable public var animationDuration = TimeInterval(1.0)
 
     /// Color for text inside progress bar
     @IBInspectable public var textColor = UIColor.darkGray
-
+    
     /// Font size for text inside progress bar
     @IBInspectable public var textSize = CGFloat(16.0)
 
