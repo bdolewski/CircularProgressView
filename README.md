@@ -15,7 +15,7 @@ Attributed text to be displayed in the middle - default value is `nil`
 ##### textColor
 Color for text inside progress bar when no `attributedText` is used - default value is `UIColor.darkGray`
 
-#### textSize
+##### textSize
 Font size for text inside progress bar - default value is `CGFloat(16.0)`
 
 ##### backgroundBarColor
