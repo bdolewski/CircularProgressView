@@ -1,5 +1,10 @@
 # CircularProgressView
-Circular and animated progress bar for iOS
+![SPM](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen) ![Carthage](https://img.shields.io/badge/Carthage-not%20comptabile-red) ![CocoaPods](https://img.shields.io/badge/CocoaPods-not%20comptabile-red) ![Platform](https://img.shields.io/badge/Platform-iOS%2011%2B-orange)
+
+
+Circular and animated progress bar for iOS. It has configurable properties of bars, text and colors. Included animation for filling up the track.
+
+![Imgur](https://i.imgur.com/jKg6sOv.png)
 
 ## Available properties
 
