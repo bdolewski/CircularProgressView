@@ -44,4 +44,4 @@ Duration of the "filling" animation - default value is `TimeInterval(1.0)`
 
 Difference between animation set to `True` and `False` - Example:
 
-![Example](https://media.giphy.com/media/ZZrfvWt1wV4GnMxL5P/giphy.gif)
+![Example](https://media.giphy.com/media/ZZrfvWt1wV4GnMxL5P/source.mov =800x600)
