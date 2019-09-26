@@ -15,6 +15,7 @@ let package = Package(
     targets: [
         .target(
             name: "CircularProgressView",
-            dependencies: []),
+            dependencies: [],
+            path: "CircularProgressView/Sources")
     ]
 )
