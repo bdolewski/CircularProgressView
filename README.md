@@ -10,30 +10,66 @@ Circular and animated progress bar for iOS. It has configurable properties of ba
 
 ##### lineWidth
 Size of the bar (stroke width) - default value is `CGFloat(12.0)`
+```swift
+// Change stroke to 18
+bar.lineWidth = CGFloat(18.0)
+```
 
 ##### text
 Text to be displayed in the middle - default value is `nil`
+```swift
+// Set the text inside progress view
+bar.text = "Calories intake"
+```
 
 ##### attributedText
 Attributed text to be displayed in the middle - default value is `nil`
+```swift
+// Set the attributed text inside progress view
+bar.attributedText = "Calories intake"
+```
 
 ##### textColor
 Color for text inside progress bar when no `attributedText` is used - default value is `UIColor.darkGray`
+```swift
+// Set the color for text inside progress view
+bar.textColor = .systemRed
+```
 
 ##### textSize
 Font size for text inside progress bar - default value is `CGFloat(16.0)`
+```swift
+// Set the font size of text inside progress view
+bar.textSize = CGFloat(20)
+```
 
 ##### backgroundBarColor
 Color for background (base) track - default value is `UIColor.systemGray`
+```swift
+// Set the background color of track
+bar.backgroundBarColor = .white
+```
 
 ##### foregroundBarColor
 Color for foreground (main) track - default value is `UIColor.systemBlue`
+```swift
+// Set the foreground color of track
+bar.foregroundBarColor = .yellow
+```
 
 ##### maximumBarColor
 Color for the foreground (main) track when it reaches the maximum value (full circle) - default value is `UIColor.systemRed`
+```swift
+// Set the color of track when full circle is drawn
+bar.maximumBarColor = .orange
+```
 
 ##### animationDuration
 Duration of the "filling" animation - default value is `TimeInterval(1.0)`
+```swift
+// Make the animations slow like in the demo bellow
+bar.animationDuration = TimeInterval(3.0)
+```
 
 ## Available functions
 
