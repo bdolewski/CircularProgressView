@@ -1,7 +1,7 @@
 os:
   - osx
 language: swift
-osx_image: xcode11
+osx_image: xcode13.2
 env:
   - PROJECT_NAME=CircularProgressView
 install: swift package update
