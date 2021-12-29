@@ -30,7 +30,7 @@ public final class CircularProgressView: UIView {
             label.attributedText = attributedText
         }
     }
-
+    
     /// Color for backgorund/base bar
     @IBInspectable public var backgroundBarColor = UIColor.systemGray
     
@@ -42,13 +42,13 @@ public final class CircularProgressView: UIView {
     
     /// Duration of the "filling" animation
     @IBInspectable public var animationDuration = TimeInterval(1.0)
-
+    
     /// Color for text inside progress bar
     @IBInspectable public var textColor = UIColor.darkGray
     
     /// Font size for text inside progress bar
     @IBInspectable public var textSize = CGFloat(16.0)
-
+    
     private var label = UILabel()
     private let foregroundLayer = CAShapeLayer()
     private let backgroundLayer = CAShapeLayer()
@@ -84,7 +84,7 @@ public final class CircularProgressView: UIView {
 
 // MARK: - Animation
 private extension CircularProgressView {
-    private func progressAnimation(_ progress: Double) {
+    func progressAnimation(_ progress: Double) {
         let animation = CABasicAnimation(keyPath: "strokeEnd")
         animation.fromValue = 0
         animation.toValue = progress
@@ -99,12 +99,12 @@ private extension CircularProgressView {
 
 // MARK: - Setup bars
 private extension CircularProgressView {
-    private func setupBars(){
+    func setupBars(){
         setupBackgroundLayer()
         setupForegroundLayer()
     }
     
-    private func setupBackgroundLayer() {
+    func setupBackgroundLayer() {
         backgroundLayer.path = circularPath.cgPath
         backgroundLayer.lineWidth = lineWidth
         backgroundLayer.strokeColor = backgroundBarColor.cgColor
@@ -115,7 +115,7 @@ private extension CircularProgressView {
         layer.addSublayer(backgroundLayer)
     }
     
-    private func setupForegroundLayer() {
+    func setupForegroundLayer() {
         foregroundLayer.path = circularPath.cgPath
         foregroundLayer.lineWidth = lineWidth
         foregroundLayer.fillColor = UIColor.clear.cgColor
@@ -126,14 +126,14 @@ private extension CircularProgressView {
         layer.addSublayer(foregroundLayer)
     }
     
-    private func setColor(by progress: Double) {
+    func setColor(by progress: Double) {
         foregroundLayer.strokeColor = (progress >= 1.0) ? maximumBarColor.cgColor : foregroundBarColor.cgColor
     }
 }
 
 // MARK: - Setup label
 private extension CircularProgressView {
-    private func setupPercentageLabel() {
+    func setupPercentageLabel() {
         label.textAlignment = .center
         label.textColor = textColor
         label.font = UIFont.systemFont(ofSize: textSize)
@@ -147,20 +147,20 @@ private extension CircularProgressView {
 
 // MARK: - Calculations & helpers
 private extension CircularProgressView {
-    private var circularPath: UIBezierPath {
+    var circularPath: UIBezierPath {
         return UIBezierPath(arcCenter: .zero, radius: radius, startAngle: 0, endAngle: 2 * .pi, clockwise: true)
     }
     
-    private var radius: CGFloat {
+    var radius: CGFloat {
         let availableSpace = min(frame.width, frame.height)
         return (availableSpace - lineWidth).half
     }
     
-    private var pathCenter: CGPoint {
-        return CGPoint(x: bounds.midX, y: bounds.midY)
+    var pathCenter: CGPoint {
+        CGPoint(x: bounds.midX, y: bounds.midY)
     }
     
-    private var rotationAngle: CGFloat {
-        return -CGFloat.pi.half
+    var rotationAngle: CGFloat {
+        -CGFloat.pi.half
     }
 }

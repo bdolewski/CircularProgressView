@@ -11,6 +11,6 @@ import Foundation
 
 internal extension FloatingPoint {
     func clamped(to range: ClosedRange<Self>) -> Self {
-        return max(min(self, range.upperBound), range.lowerBound)
+        max(min(self, range.upperBound), range.lowerBound)
     }
 }
